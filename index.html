@@ -5,7 +5,24 @@
     <meta name="viewport" content="width=device-width" />
     <title>Using Font Awesome with Rollup</title>
     <script src="dist/index.js"></script>
+    <style>
+    p {
+      background-color: rgba(0, 0, 0, 0.1);
+      width: 10rem;
+      height: 10rem;
+      text-align: center;
+    }
+    </style>
   </head>
   <body>
+    <p>
+      <!-- This one will work because it's using "fas" -->
+      <i class="fas fa-user-secret fa-10x"></i>
+    </p>
+
+    <p>
+      <!-- This one will not, "fa-solid" is not recognized -->
+      <i class="fa-solid fa-user-secret fa-10x"></i>
+    </p>
   </body>
 </html>
